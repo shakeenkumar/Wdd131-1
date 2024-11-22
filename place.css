@@ -1,67 +1,65 @@
-/* Global Styles */
-:root {
-    --main-bg: #0077cc;
-    --text-color: #333;
-    --accent: #f9f9f9;
-}
-
+/* Basic Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    color: #333;
     line-height: 1.6;
-    color: var(--text-color);
+    background: #f4f4f9;
 }
 
 header {
-    background-color: var(--main-bg);
+    background: #008080;
     color: white;
+    padding: 15px 0;
     text-align: center;
-    padding: 10px 0;
 }
 
 header nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 header nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
+/* Hero Section */
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+    border-bottom: 4px solid #008080;
 }
 
-.content, .weather {
+/* Content Section */
+.content {
+    text-align: center;
     padding: 20px;
-    background-color: var(--accent);
-    margin: 10px auto;
     max-width: 800px;
-    border-radius: 5px;
+    margin: 20px auto;
+    background: #e6f7f7;
+    border-radius: 8px;
 }
 
+/* Weather Section */
+.weather {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #e0f2f1;
+    border-radius: 8px;
+}
+
+/* Footer */
 footer {
-    background-color: #222;
-    color: white;
     text-align: center;
     padding: 10px;
-}
-
-footer span {
-    color: var(--accent);
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    .hero img {
-        border-radius: 5px;
-    }
+    background: #006666;
+    color: white;
 }
