@@ -1,17 +1,21 @@
-// Function to calculate windchill
+// Function to calculate wind chill
 function calculateWindChill(temp, windSpeed) {
-    // Only calculate if conditions are met
-    if ((temp <= 10 && windSpeed > 4.8) || (temp <= 50 && windSpeed > 3)) {
-        return Math.round(35.74 + 0.6215 * temp - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temp * Math.pow(windSpeed, 0.16));
-    } else {
-        return 'N/A';
+    if (temp <= 50 && windSpeed > 3) { // Conditions for wind chill calculation
+      // Wind chill formula for Fahrenheit
+      return (35.74 + 0.6215 * temp - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
     }
-}
-
-// Display the windchill factor when the page loads
-window.onload = function () {
-    var temperature = 28; // Example static temperature in °C
-    var windSpeed = 15; // Example static wind speed in km/h
-    var windchill = calculateWindChill(temperature, windSpeed);
-    document.getElementById("windchill").textContent = windchill + '°C';
-};
+    return "N/A";
+  }
+  
+  // Display current year and last modified date in the footer
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
+  
+  // Static temperature and wind speed for now
+  const temp = 50; // in °F
+  const windSpeed = 10; // in mph
+  
+  // Calculate and display wind chill
+  const windChill = calculateWindChill(temp, windSpeed);
+  document.getElementById("windChill").textContent = `${windChill}°F`;
+  

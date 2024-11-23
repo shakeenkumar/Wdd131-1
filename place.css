@@ -1,67 +1,60 @@
-/* Basic Styles for the Webpage */
-* {
+/* Global variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f4;
+    --font-family: Arial, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-header {
-    background: #333;
-    color: white;
-    padding: 20px 0;
+  }
+  
+  header {
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.section {
     padding: 20px;
-    margin: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-#weather-icon {
-    margin-right: 10px;
-}
-
-footer {
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .weather {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  footer {
     text-align: center;
     padding: 10px;
-    background: #333;
+    background-color: var(--primary-color);
     color: white;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 1rem;
-}
+  }
+  
+  /* Mobile View (SVG Weather Icon) */
+  @media (max-width: 768px) {
+    .weather h2::after {
+      content: " 🌞"; /* Using pseudo-element for emoticon */
+      font-size: 1.5em;
+    }
+  }
+  
+  /* Large view (WebP image swapping) */
+  @media (min-width: 768px) {
+    .hero img {
+      display: block;
+    }
+  }
+  
