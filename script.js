@@ -1,26 +1,14 @@
-// Set the current year and last modified date
-document.getElementById("current-year").textContent = new Date().getFullYear();
+// Set the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Set the last modified date in the footer
 document.getElementById("last-modified").textContent = document.lastModified;
 
-// Calculate wind chill
-function calculateWindChill(temp, windSpeed) {
-  return (
-    13.12 +
-    0.6215 * temp -
-    11.37 * Math.pow(windSpeed, 0.16) +
-    0.3965 * temp * Math.pow(windSpeed, 0.16)
-  ).toFixed(1); // Metric formula (°C)
-}
-
-const temperature = 30; // Static temperature
-const windSpeed = 5; // Static wind speed
-
-// Only calculate wind chill if conditions are met
-if (temperature <= 10 && windSpeed > 4.8) {
-  document.getElementById("wind-chill").textContent = calculateWindChill(
-    temperature,
-    windSpeed
-  ) + "°C";
-} else {
-  document.getElementById("wind-chill").textContent = "N/A";
+// Wind chill calculation function
+function calculateWindChill(temperature, windSpeed) {
+  if (temperature <= 50 && windSpeed > 3) {
+    const windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+    return Math.round(windChill);
+  }
+  return null;
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rajahmundry City</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to Rajahmundry</h1>
+    <picture>
+      <!-- Responsive image in WebP format -->
+      <source srcset="images/rajahmundry-large.webp" media="(min-width: 768px)">
+      <img src="images/rajahmundry-small.webp" alt="Rajahmundry City" class="hero-image">
+    </picture>
+  </header>
+
+  <!-- Data Section -->
+  <section class="data">
+    <h2>City Data</h2>
+    <div class="data-grid">
+      <div class="card" id="population"><strong>Population:</strong> 300,000</div>
+      <div class="card" id="land-area"><strong>Land Area:</strong> 50 sq km</div>
+      <div class="card" id="main-river"><strong>Main River:</strong> Godavari</div>
+    </div>
+  </section>
+
+  <!-- Weather Section (Mobile View SVG) -->
+  <section class="weather">
+    <h2>Weather in Rajahmundry</h2>
+    <div id="weather-icon">
+      <!-- SVG Weather Icon (only visible on mobile view) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" id="weather-icon-svg">
+        <circle cx="12" cy="12" r="10" fill="#ffcc00"/>
+        <text x="12" y="16" font-size="12" text-anchor="middle" fill="#000">Sunny</text>
+      </svg>
+    </div>
+    <div id="weather-text">
+      <p>Sunny, 28°C</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; <span id="year"></span> Rajahmundry City</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
