@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Rajahmundry</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,57 +14,33 @@
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#weather">Weather</a></li>
-                <li><a href="#attractions">Attractions</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section with Image Layering -->
         <section id="hero">
             <picture>
-                <source media="(max-width: 768px)" srcset="images/rajahmundry-small.webp">
-                <source media="(min-width: 769px)" srcset="images/rajahmundry-large.webp">
-                <img src="images/rajahmundry-large.webp" alt="Hero Image of Rajahmundry">
+                <source media="(max-width: 768px)" srcset="assets/images/rajahmundry-small.webp">
+                <source media="(min-width: 769px)" srcset="assets/images/rajahmundry-large.webp">
+                <img src="assets/images/rajahmundry-large.webp" alt="Hero Image of Rajahmundry">
             </picture>
-        </section>
+            
+            <!-- Overlay Content Layered on the Hero Image -->
+            <div id="hero-overlay">
+                <div id="overview" class="hero-content">
+                    <h2>Overview of Rajahmundry</h2>
+                    <p>Rajahmundry is a city located in the Indian state of Andhra Pradesh. Known for its scenic views of the Godavari River, it's a cultural and historic hub. The city is famous for its temples, cuisine, and bustling markets.</p>
+                </div>
 
-        <section id="overview">
-            <h2>Overview of Rajahmundry</h2>
-            <p>Rajahmundry is a city located in the Indian state of Andhra Pradesh. Known for its scenic views of the Godavari River, it's a cultural and historic hub. The city is famous for its temples, cuisine, and bustling markets.</p>
-
-            <h3>General Information</h3>
-            <ul>
-                <li><strong>Country:</strong> India</li>
-                <li><strong>State:</strong> Andhra Pradesh</li>
-                <li><strong>Coordinates:</strong> 17.0027° N, 81.7701° E</li>
-                <li><strong>Area:</strong> 16.5 km²</li>
-                <li><strong>Population:</strong> 500,000 (Approx.)</li>
-                <li><strong>Time Zone:</strong> IST (Indian Standard Time, UTC +5:30)</li>
-            </ul>
-
-            <h3>Interesting Facts</h3>
-            <ul>
-                <li>Rajahmundry is known as the cultural capital of Andhra Pradesh.</li>
-                <li>It is named after Raja Raja Narendra, a Chalukya dynasty king.</li>
-                <li>The Godavari River flows through Rajahmundry, adding to its historic significance.</li>
-            </ul>
-        </section>
-
-        <section id="weather">
-            <h2>Weather ⛅</h2>
-            <p>Temperature: <span id="temp">28°C</span></p>
-            <p>Wind Speed: <span id="wind">15 km/h</span></p>
-            <p>Wind Chill: <span id="windchill">Calculating...</span></p>
-        </section>
-
-        <section id="attractions">
-            <h2>Top Attractions in Rajahmundry</h2>
-            <ul>
-                <li><strong>Godavari Bridge</strong>: The second longest road-cum-rail bridge in India.</li>
-                <li><strong>Markandeya Temple</strong>: A significant ancient Hindu temple.</li>
-                <li><strong>Papi Hills</strong>: Known for natural beauty and scenic views along the Godavari River.</li>
-                <li><strong>Kadiyali Beach</strong>: A peaceful beach destination.</li>
-            </ul>
+                <div id="weather" class="hero-content">
+                    <h2>Weather <span id="weather-icon"></span></h2>
+                    <p>Temperature: <span id="temp">28°C</span></p>
+                    <p>Wind Speed: <span id="wind">15 km/h</span></p>
+                    <p>Wind Chill: <span id="windchill">Calculating...</span></p>
+                </div>
+            </div>
         </section>
     </main>
 

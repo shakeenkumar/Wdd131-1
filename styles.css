@@ -77,6 +77,28 @@ main {
   font-size: 1.1em;
 }
 
+/* Mobile View Weather Icon */
+@media (max-width: 768px) {
+  #weather-icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('assets/icons/weather-icon.svg'); /* Replace with your actual SVG icon */
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: 10px;
+  }
+}
+
+/* Desktop View Weather Icon */
+@media (min-width: 769px) {
+  #weather-icon {
+      content: "⛅"; /* Default text for wider screens */
+      font-size: 1.5em;
+      margin-left: 10px;
+  }
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
   header h1 {
