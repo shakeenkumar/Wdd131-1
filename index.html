@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rajahmundry - Country Page">
+  <meta name="description" content="Weather and tourist information for Rajahmundry">
   <title>Rajahmundry</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
+
 <body>
   <header>
-    <h1>Rajahmundry</h1>
+    <h1>Welcome to Rajahmundry</h1>
+    <p>Your guide to weather, culture, and tourism!</p>
   </header>
 
-  <!-- Hero Image with WebP srcset for responsive images -->
-  <section class="hero">
-    <img src="rajahmundry-small.webp" alt="Rajahmundry" 
-         srcset="rajahmundry-large.webp 1024w, rajahmundry-small.webp 500w" sizes="(max-width: 600px) 100vw, 50vw">
-  </section>
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="hero-large.webp 1024w, hero-small.webp 500w" sizes="(max-width: 600px) 100vw, 50vw" type="image/webp">
+        <img src="hero-small.webp" alt="Rajahmundry Landscape">
+      </picture>
+    </section>
 
-  <!-- Weather Section -->
-  <section class="weather">
-    <h2>Weather ⛅</h2>
-    <p>Temperature: <span id="temp">20°C</span></p>
-    <p>Wind Speed: <span id="windSpeed">15 km/h</span></p>
-    <p>Wind Chill: <span id="windChill">N/A</span></p>
-  </section>
+    <section class="weather">
+      <h2>Weather</h2>
+      <div class="weather-info">
+        <p>Temperature: <span id="temperature">30°C</span></p>
+        <p>Wind Speed: <span id="windSpeed">5 km/h</span></p>
+        <p>Wind Chill: <span id="windChill">N/A</span></p>
+        <img class="weather-icon" src="weather-icon.svg" alt="Weather Icon">
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; <span id="currentYear"></span> | Rajahmundry</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p id="footerContent"></p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
+
 </html>

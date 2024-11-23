@@ -1,21 +1,20 @@
-// Function to calculate wind chill
-function calculateWindChill(temp, windSpeed) {
-    if (temp <= 50 && windSpeed > 3) { // Conditions for wind chill calculation
-      // Wind chill formula for Fahrenheit
-      return (35.74 + 0.6215 * temp - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
-    }
-    return "N/A";
-  }
-  
-  // Display current year and last modified date in the footer
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = document.lastModified;
-  
-  // Static temperature and wind speed for now
-  const temp = 50; // in °F
-  const windSpeed = 10; // in mph
-  
-  // Calculate and display wind chill
-  const windChill = calculateWindChill(temp, windSpeed);
-  document.getElementById("windChill").textContent = `${windChill}°F`;
-  
+// Footer: Add current year and last modified date
+const footerContent = document.getElementById("footerContent");
+const currentYear = new Date().getFullYear();
+const lastModified = document.lastModified;
+footerContent.innerHTML = `&copy; ${currentYear} | Rajahmundry | Last Modified: ${lastModified}`;
+
+// Weather: Calculate Wind Chill
+const temperature = 30; // Celsius
+const windSpeed = 5; // km/h
+
+function calculateWindChill(temp, wind) {
+  return (13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)).toFixed(1);
+}
+
+const windChillElement = document.getElementById("windChill");
+if (temperature <= 10 && windSpeed > 4.8) {
+  windChillElement.textContent = calculateWindChill(temperature, windSpeed) + "°C";
+} else {
+  windChillElement.textContent = "N/A";
+}
