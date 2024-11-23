@@ -1,90 +1,77 @@
-/* Global Styles */
-:root {
-    --primary-color: #007bff;
-    --secondary-color: #ffffff;
-    --text-color: #333;
-    --hero-bg: #f8f9fa;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    margin: 0;
-    line-height: 1.6;
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 1em;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: var(--hero-bg);
-    text-align: center;
-    padding: 2em 0;
-  }
-  
-  .hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  /* Weather Section */
-  .weather {
-    margin: 2em;
-    text-align: center;
-  }
-  
-  .weather h2 {
-    position: relative;
-  }
-  
-  .weather h2::after {
-    content: "🌞";
-    font-size: 2em;
-    margin-left: 0.5em;
-    display: none;
-  }
-  
-  @media (min-width: 768px) {
-    .weather h2::after {
-      display: inline-block;
-    }
-  }
-  
-  .weather-info {
-    margin: 1em auto;
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1em;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    header {
-      font-size: 0.9em;
-    }
-  
-    .hero {
-      padding: 1em;
-    }
-  }
-  
-  
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #003366; /* Navy blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #0073e6; /* Light blue border */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.hero img {
+  max-width: 90%;
+  border-radius: 10px;
+  border: 2px solid #0073e6;
+}
+
+/* Weather Section */
+.weather-info {
+  text-align: center;
+  margin: 20px auto;
+  background-color: #e6f7ff; /* Very light blue */
+  border: 1px solid #0073e6;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info h2 {
+  color: #003366; /* Navy blue */
+}
+
+.weather-icon {
+  margin-top: 15px;
+  width: 50px;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 0.9em;
+  border-top: 5px solid #0073e6;
+}
+
+footer p {
+  margin: 0;
+}

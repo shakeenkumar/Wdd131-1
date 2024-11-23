@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Weather and tourist information for Rajahmundry">
-  <title>Rajahmundry</title>
+  <meta name="description" content="A guide to Rajahmundry weather, culture, and tourism.">
+  <title>Welcome to Rajahmundry</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
   <header>
     <h1>Welcome to Rajahmundry</h1>
@@ -18,27 +17,22 @@
   <main>
     <section class="hero">
       <picture>
-        <source srcset="hero-large.webp 1024w, hero-small.webp 500w" sizes="(max-width: 600px) 100vw, 50vw" type="image/webp">
-        <img src="hero-small.webp" alt="Rajahmundry Landscape">
+        <source srcset="images/hero-large.webp 1024w, images/hero-small.webp 500w" sizes="(max-width: 600px) 100vw, 50vw" type="image/webp">
+        <img src="images/hero-small.webp" alt="Rajahmundry Landscape">
       </picture>
     </section>
 
-    <section class="weather">
+    <section class="weather-info">
       <h2>Weather</h2>
-      <div class="weather-info">
-        <p>Temperature: <span id="temperature">30°C</span></p>
-        <p>Wind Speed: <span id="windSpeed">5 km/h</span></p>
-        <p>Wind Chill: <span id="windChill">N/A</span></p>
-        <img class="weather-icon" src="weather-icon.svg" alt="Weather Icon">
-      </div>
+      <p><strong>Temperature:</strong> 30°C</p>
+      <p><strong>Wind Speed:</strong> 5 km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+      <img class="weather-icon" src="icons/weather-icon.svg" alt="Weather Icon">
     </section>
   </main>
 
   <footer>
-    <p id="footerContent"></p>
+    <p>&copy; <span id="current-year"></span> Welcome to Rajahmundry. Last Modified: <span id="last-modified"></span></p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
-
 </html>

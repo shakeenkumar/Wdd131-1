@@ -1,20 +1,26 @@
-// Footer: Add current year and last modified date
-const footerContent = document.getElementById("footerContent");
-const currentYear = new Date().getFullYear();
-const lastModified = document.lastModified;
-footerContent.innerHTML = `&copy; ${currentYear} | Rajahmundry | Last Modified: ${lastModified}`;
+// Set the current year and last modified date
+document.getElementById("current-year").textContent = new Date().getFullYear();
+document.getElementById("last-modified").textContent = document.lastModified;
 
-// Weather: Calculate Wind Chill
-const temperature = 30; // Celsius
-const windSpeed = 5; // km/h
-
-function calculateWindChill(temp, wind) {
-  return (13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)).toFixed(1);
+// Calculate wind chill
+function calculateWindChill(temp, windSpeed) {
+  return (
+    13.12 +
+    0.6215 * temp -
+    11.37 * Math.pow(windSpeed, 0.16) +
+    0.3965 * temp * Math.pow(windSpeed, 0.16)
+  ).toFixed(1); // Metric formula (°C)
 }
 
-const windChillElement = document.getElementById("windChill");
+const temperature = 30; // Static temperature
+const windSpeed = 5; // Static wind speed
+
+// Only calculate wind chill if conditions are met
 if (temperature <= 10 && windSpeed > 4.8) {
-  windChillElement.textContent = calculateWindChill(temperature, windSpeed) + "°C";
+  document.getElementById("wind-chill").textContent = calculateWindChill(
+    temperature,
+    windSpeed
+  ) + "°C";
 } else {
-  windChillElement.textContent = "N/A";
+  document.getElementById("wind-chill").textContent = "N/A";
 }
