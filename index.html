@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Rajahmundry</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajahmundry</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Rajahmundry</h1>
-        <nav>
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#weather">Weather</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Rajahmundry</h1>
+  </header>
 
-    <main>
-        <!-- Hero Section with Image Layering -->
-        <section id="hero">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/rajahmundry-small.webp">
-                <source media="(min-width: 769px)" srcset="images/rajahmundry-large.webp">
-                <img src="images/rajahmundry-large.webp" alt="Hero Image of Rajahmundry">
-            </picture>
-            
-            <!-- Overlay Content Layered on the Hero Image -->
-            <div id="hero-overlay">
-                <div id="overview" class="hero-content">
-                    <h2>Overview of Rajahmundry</h2>
-                    <p>Rajahmundry is a city located in the Indian state of Andhra Pradesh. Known for its scenic views of the Godavari River, it's a cultural and historic hub. The city is famous for its temples, cuisine, and bustling markets.</p>
-                </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <picture>
+      <source srcset="images/rajahmundry-large.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="images/rajahmundry-small.webp" type="image/webp">
+      <img src="images/rajahmundry-default.webp" alt="Scenic view of Godavari River in Rajahmundry">
+    </picture>
+  </section>
 
-                <div id="weather" class="hero-content">
-                    <h2>Weather <span id="weather-icon"></span></h2>
-                    <p>Temperature: <span id="temp">28°C</span></p>
-                    <p>Wind Speed: <span id="wind">15 km/h</span></p>
-                    <p>Wind Chill: <span id="windchill">Calculating...</span></p>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- Data Section -->
+  <section class="data">
+    <h2>Data</h2>
+    <ul>
+      <li><strong>Area:</strong> 108.7 sq km</li>
+      <li><strong>Population:</strong> ~350,000</li>
+      <li><strong>Capital:</strong> N/A</li>
+      <li><strong>Languages:</strong> Telugu, English</li>
+      <li><strong>Currency:</strong> Indian Rupee (INR)</li>
+      <li><strong>Time Zone:</strong> UTC+5:30</li>
+      <li><strong>Calling Code:</strong> +91</li>
+      <li><strong>Internet TLD:</strong> .in</li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Rajahmundry Explorer. Last modified: <span id="last-modified"></span></p>
-    </footer>
+  <!-- Weather Section -->
+  <section class="weather">
+    <h2>Weather</h2>
+    <div class="weather-info">
+      <!-- SVG for Mobile View -->
+      <div class="weather-icon-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="80" height="80" fill="#FFC107">
+          <circle cx="32" cy="32" r="12"></circle>
+          <g stroke="#FFC107" stroke-width="2">
+            <line x1="32" y1="0" x2="32" y2="12"></line>
+            <line x1="32" y1="52" x2="32" y2="64"></line>
+            <line x1="0" y1="32" x2="12" y2="32"></line>
+            <line x1="52" y1="32" x2="64" y2="32"></line>
+            <line x1="8" y1="8" x2="16" y2="16"></line>
+            <line x1="48" y1="48" x2="56" y2="56"></line>
+            <line x1="8" y1="56" x2="16" y2="48"></line>
+            <line x1="48" y1="16" x2="56" y2="8"></line>
+          </g>
+        </svg>
+      </div>
+      <ul>
+        <li><strong>Temperature:</strong> 30°C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> 15 km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©2024 Rajahmundry</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
 </body>
 </html>
