@@ -1,107 +1,67 @@
-/* General Reset */
-* {
+/* Global Variables */
+:root {
+  --primary-color: #004d00; /* Green for nature, river */
+  --secondary-color: #ffcc00; /* Golden yellow */
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f0f0f0;
 }
 
-/* Body Styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-h1, h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Hero Section Styles */
-.hero {
-  background-color: #2196f3;
-  padding: 30px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
+header {
+  background-color: var(--primary-color);
   color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.hero-image {
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+#hero img {
   width: 100%;
   height: auto;
 }
 
-/* Data Section Styles */
-.data {
-  padding: 20px;
-  background-color: #fff;
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.5em;
+  }
+  #hero img {
+      height: 250px;
+  }
 }
 
-.data-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+@media (min-width: 769px) {
+  #hero img {
+      height: 500px;
+  }
 }
 
-.card {
-  background-color: #ececec;
-  padding: 15px;
-  margin: 10px;
-  flex: 1;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Weather Section Styles */
-.weather {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-#weather-icon-svg {
-  display: none;
-}
-
-#weather-text {
-  font-size: 1.2rem;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
-  background-color: #2196f3;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 10px;
   position: fixed;
-  width: 100%;
   bottom: 0;
-}
-
-/* Mobile View Styles */
-@media (max-width: 767px) {
-  /* Hide desktop image */
-  .hero-image[srcset="images/rajahmundry-large.webp"] {
-    display: none;
-  }
-
-  /* Show SVG weather icon */
-  #weather-icon-svg {
-    display: block;
-  }
-}
-
-/* Desktop View Styles */
-@media (min-width: 768px) {
-  .hero-image {
-    display: block;
-  }
-  #weather-icon-svg {
-    display: none;
-  }
+  width: 100%;
 }
